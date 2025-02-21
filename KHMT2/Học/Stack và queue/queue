@@ -1,0 +1,73 @@
+Struct Node
+{
+    Node *next;
+};
+
+Struct Queue
+{
+    Node *front;
+    Node *rear;
+};
+
+void enqueue(Queue &queue, Node *newNode)
+{
+    // emty queue
+    if (front == nullptr)
+    {
+        front = rear = newNode;
+    }
+    else
+    {
+        rear->pnext = newNode;
+        rear = newNode;
+    }
+}
+
+void dequeue(Queue &queue)
+{
+    //
+    if (front = nullptr)
+    {
+        cout << "empty queue";
+    }
+    else
+    {
+        Node *temp = front;
+        front = front->next;
+        delete temp;
+    }
+}
+
+struct Stack
+{
+    Node *top;
+};
+
+void push(stack &s, Node *newNode)
+{
+    // empty stack
+    if (top = nullptr)
+    {
+        top = newNode;
+    }
+    else
+    {
+        newNode->pNext = top;
+        top = newNode;
+    }
+}
+
+void pop(Stack &s)
+{
+    // empty stack
+    if (top == nullptr)
+    {
+        cout << "empty stack";
+    }
+    else
+    {
+        Node *temp = top;
+        top = top->pNext;
+        delete temp;
+    }
+}
